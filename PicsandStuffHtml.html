@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html> 
+<head>   
+<title> PicsandStuff </title>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="icon" type="image/png" href="camera-retro-solid.png" />
+<link href="PicsandStuffcss.css" rel="stylesheet">
+</head>
+<!--seach bar stuff-->
+<body background="congruent_outline.png">
+    <div class="topnav">
+            <a class="active" href="#home">Home</a>
+            <a href="#Info">Info</a>
+            <a href="#Help">Help</a>
+            <div class="search-container">
+              <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit">Submit</button>
+              </form>
+            </div>
+          </div>
+          <div style="padding-left:16px">
+    <h1 id="Header1" > Welcome to PicsandStuff.</h1>
+        </div>
+
+        <!--Tabs stuff below-->
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'Trending')">Trending</button>
+          <button class="tablinks" onclick="openCity(event, 'New')">New</button>
+          <button class="tablinks" onclick="openCity(event, 'OldSchool')">Old School</button>
+        </div>
+        
+        
+        <div id="Trending" class="tabcontent">
+          <h3>Trending</h3>
+          <p>No trending pictures :(</p>
+          <span onclick="this.parentElement.style.display='none'">x</span> 
+
+        </div>
+        
+        <div id="New" class="tabcontent">
+          <h3>New</h3>
+          <p>No new pictures :(</p> 
+          <span onclick="this.parentElement.style.display='none'">x</span> 
+
+        </div>
+        
+        <div id="OldSchool" class="tabcontent">
+          <h3>Old School</h3>
+          <p>No Old School pictures :(</p>
+          <span onclick="this.parentElement.style.display='none'">x</span> 
+        </div>
+    
+     
+     <!--java script stuff below-->
+     <script>
+     function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+     </script>
+                   
+
+
+
+
+
+
+
+</body>     
+</html>
